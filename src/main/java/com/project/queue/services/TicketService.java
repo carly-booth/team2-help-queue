@@ -24,13 +24,13 @@ public class TicketService {
 		return this.repo.save(ticket);
 	}
 
-	public Ticket getDogByID(Long id) {
+	public Ticket getTicketByID(Long id) {
 		Optional<Ticket> ticket = this.repo.findById(id);
 		return ticket.get();
 
 	}
 
-	public List<Ticket> getDogs() {
+	public List<Ticket> getTickets() {
 		return this.repo.findAll();
 	}
 
@@ -39,6 +39,26 @@ public class TicketService {
 		this.repo.deleteById(id);
 		boolean found = this.repo.existsById(id); 
 		return !found;
+	}
+	
+	/*public Ticket updateTicketById(Long id, String answer) {
+		Ticket existing = this.repo.findById(id).get();
+
+		existing.setSolution(answer);
+		//existing.setName(newData.getName());
+		//existing.setProblemDescription(newData.getProblemDescription());
+
+		return this.repo.save(existing);
+	} */
+	
+	public Ticket updateTicketById(Long id, Ticket newData) {
+		Ticket existing = this.repo.findById(id).get();
+
+		existing.setSolution(newData.getSolution());
+		//existing.setName(newData.getName());
+		//existing.setProblemDescription(newData.getProblemDescription());
+
+		return this.repo.save(existing);
 	}
 
 

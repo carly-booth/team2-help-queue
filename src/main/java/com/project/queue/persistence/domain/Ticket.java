@@ -1,5 +1,6 @@
 package com.project.queue.persistence.domain;
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,20 +11,24 @@ public class Ticket {
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
 	private String name;
-	
+
 	private String problemDescription;
-	
-	private String solution;
-	
-	Date date = new Date();
-	
-	private long timestamp = date.getTime();	
-	
+
+	private String solution = "";
+
+	private LocalDateTime create = LocalDateTime.now();
 
 	public Ticket() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Ticket(String name, String problemDescription, String solution) {
 		super();
+		this.name = name;
+		this.problemDescription = problemDescription;
+		this.solution = solution;
 	}
 
 	public long getId() {
@@ -49,7 +54,7 @@ public class Ticket {
 	public void setProblemDescription(String problemDescription) {
 		this.problemDescription = problemDescription;
 	}
-	
+
 	public String getSolution() {
 		return solution;
 	}
@@ -58,19 +63,12 @@ public class Ticket {
 		this.solution = solution;
 	}
 
-	public long getTimestamp() {
-		return timestamp;
+	public LocalDateTime getCreate() {
+		return create;
 	}
 
-	public void setTimestamp(long timestamp) {
-		this.timestamp = timestamp;
+	public void setCreate(LocalDateTime create) {
+		this.create = create;
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

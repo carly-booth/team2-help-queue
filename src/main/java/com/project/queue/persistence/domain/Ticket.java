@@ -18,7 +18,7 @@ public class Ticket {
 
 	private String solution = "";
 
-	private LocalDateTime create = LocalDateTime.now();
+	private LocalDateTime created = LocalDateTime.now();
 
 	public Ticket() {
 		// TODO Auto-generated constructor stub
@@ -63,12 +63,12 @@ public class Ticket {
 		this.solution = solution;
 	}
 
-	public LocalDateTime getCreate() {
-		return create;
+	public LocalDateTime getCreated() {
+		return created;
 	}
 
-	public void setCreate(LocalDateTime create) {
-		this.create = create;
+	public void setCreated(LocalDateTime created) {
+		this.created = created;
 	}
 
 }

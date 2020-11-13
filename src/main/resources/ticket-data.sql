@@ -1,0 +1,1 @@
+insert into ticket (name, problemDescription, solution) values ("Nick", "test", "");

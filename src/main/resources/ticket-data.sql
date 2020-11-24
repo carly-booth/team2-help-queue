@@ -1,1 +1,1 @@
-insert into ticket (name, problemDescription, solution) values ("Nick", "test", "");
+insert into ticket (`name`, `problem_description`, `solution`) values ('Nick', 'test', '');

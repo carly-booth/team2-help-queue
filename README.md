@@ -1,6 +1,7 @@
 # Help Queue Application
 
 Description 
+
 The Help Queue Application is a web-hosted application, intended for Atos employees to receive IT assistance directly from IT support staff, in the form of tickets. 
 
 Employees can post a ticket to the help queue, containing a description of their problem and its level of urgency, to which IT support staff then can post a solution. Employees can update their tickets whilst in the queue, to change the description or level or urgency. 

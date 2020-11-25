@@ -22,6 +22,13 @@ To begin, we assigned roles within the Scrum Team; back-end and front-end develo
 
 We then collectively created a product backlog containing 3 main tasks, with subtasks within each; Create documentation, Create homepage/template for general front-end pages and Work on DevOps operations. Other issues in the backlog comprised user stories. Once completed, tasks within the backlog were assigned to each team member to begin working on, either individually or in pairs/groups.  After work on our own tasks began, we had daily stand ups, as well as frequent discussions during the day to get help/advice/feedback from each other. 
 
- 
-
 The initial tasks completed were  
+
+### Risk Assessment
+
+
+### Installation
+
+
+### Usage
+

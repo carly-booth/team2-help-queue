@@ -150,13 +150,6 @@ in the webhook section of GitHub.
 This can be tested and should show a success message below. From then on, any changes that you make to the code (pushes to main) will trigger a new Jenkins build.  
 
 ## Usage 
-
 - Screenshots of platform in use 
 
-## (Contributing) 
-## Credits 
-
 ## License 
-
-
-

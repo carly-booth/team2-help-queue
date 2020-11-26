@@ -146,6 +146,15 @@ docker run -d -p 8081:8081 --name help-queue help-queue
 
 This should run the commands as per the Dockerfile in that directory, first spinning up a container in which the jar file is built, and then running the jar file as per the second container that is spun up. As with running directly on the VM, the API should run on port 8081, at the VM’s IP address.  
 
+### Setup of CI/CD Pipeline
+To perform this setup, you need = to have Jenkins installed on your VM. Once = installed, you can create a freestyle project build, and enter the docker commands as per the section above.
+In the _build triggers_ section, tick _“GitHub hook trigger for GITScm polling”_, and you will need to set a webhook to:
+````
+http://<ip of your VM>/webhook-github
+````
+in the webhook section of GitHub. 
+This can be tested and should show a success message below. From then on, any changes that you make to the code (pushes to main) will trigger a new Jenkins build.  
+
 ## Usage 
 
 - Screenshots of platform in use 

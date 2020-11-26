@@ -79,6 +79,10 @@ With Jenkins set up on the VM, this enabled coordination of the automated proces
 
 ## Installation 
 ### Prerequisites 
+- Installed:
+  - JRE
+  - Maven
+
 Ensure that firewall rules are set and that HTTP is allowed. In the case of GCP; sett firewall rules to allow TCP access on the specified ports, and assign the tag names that you create to the VM that is running your app.
 
 If you are using Jenkins, you will need to set Jenkins as a sudoer; enter ‘sudo visudo’ on the shell, and setting the rule “jenkins ALL=(ALL:ALL) NOPASSWD:ALL”, giving Jenkins root access. 
@@ -92,6 +96,7 @@ There are a number of ways to run the app, but these instructions will assume th
 ### Running from a VM
 To run from a VM, first ensure that JRE and Maven are installed on the VM instance (mvn -version and java -version from the CLI should show you if they are installed). 
 If not, calling sudo apt install maven/java, for example. -----------
+
 Again, ensure that git is installed. Once installed, call:
 ````
 git clone https://github.com/nbBernard/team2-help-queue.git cd
@@ -119,6 +124,27 @@ If you want to use your own database rather than H2, you will need to create a d
 ````
 https://github.com/nbBernard/team2-help-queue/blob/main/src/main/resources/ticket-schema.sql
 ````
+
+### Running from Docker
+To run from Docker is even simpler. Ensuring that Docker is installed - if in doubt, call:
+````
+docker -version
+````
+Also, ensure you have cloned down the remote repository onto your VM, navigate to the team2-help-queue directory and enter the commands:  
+
+````
+docker rm -f help-queue 
+````
+
+````
+docker build -t help-queue
+````
+
+````
+docker run -d -p 8081:8081 --name help-queue help-queue 
+````
+
+This should run the commands as per the Dockerfile in that directory, first spinning up a container in which the jar file is built, and then running the jar file as per the second container that is spun up. As with running directly on the VM, the API should run on port 8081, at the VM’s IP address.  
 
 ## Usage 
 

@@ -1,0 +1,1 @@
+insert into ticket (`name`, `problem_description`, `solution`) values ('Nick', 'test', '');

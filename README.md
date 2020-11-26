@@ -147,38 +147,11 @@ This can be tested and should show a success message below. From then on, any ch
 
 - Screenshots of platform in use 
 
- 
-
 ## (Contributing) 
-
- 
-
- 
-
 ## Credits 
-
- 
-
- 
 
 ### License 
 
- 
-
- 
-
- 
-
- 
-=======
-The initial tasks completed were  
-
 ### Risk Assessment
-
-
-### Installation
-
-
-### Usage
 
 

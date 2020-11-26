@@ -46,7 +46,6 @@ Midway through the project, changes were made to the project specification; the 
 
  
 
-- Jira screenshots 
 
  
 

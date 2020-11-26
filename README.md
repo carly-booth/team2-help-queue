@@ -16,8 +16,10 @@ IT support staff work through the queue of tickets, which are ordered based on w
 1. Project Development 
 
 2. Architecture 
-   - Back-end
-
+  - Front-end
+  
+  - Back-end
+   
    - DevOps: CI/CD Pipeline
 
    - UML Diagrams
@@ -51,6 +53,9 @@ Documentation of the project began with developing a business case (what, why, w
 
  
 ## Architecture 
+### Front-end
+
+
 ### Back-end
 The back-end of the app comprises a REST API with full CRUD functionality, created with SpringBoot. Integration tests were written and performed also using SpringBoot, and  Postman was used to test the API functionality. When testing, a H2 database was used - as configured by our test profile. In production, Cloud SQL was used, as provided by Google, as linked to by our production profile. 
 The hosting virtual machine is provided by GCP Console, and specifically using aubuntu-1804-bionic-v20201116 image, with n1-standard-1 (1 vCPU, 3.75 GB memory) machine type. The API itself is run from within a Docker container, which will be elaborated on further when discussing the CI/CD pipeline.  

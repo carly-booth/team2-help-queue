@@ -11,7 +11,7 @@ A list of _completed_ tickets is publicly accessible within the application, so 
 
 IT support staff work through the queue of tickets, which are ordered based on waiting time (_time created_, earliest to latest) and the urgency of each ticket. Once an employee’s ticket has been resolved, they can mark it as _completed_ and becomes publicly accessible. Employees can also access the _My Tickets_ page, where they can view their current, open tickets and completed, closed tickets. 
 
-![Flowchart Horizontal](/flowchart-horizontal.jpeg)
+![FlowchartHorizontal](/flowchart-horizontal.jpg)
 
 ## Table of Contents 
 

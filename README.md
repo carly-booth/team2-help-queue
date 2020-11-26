@@ -78,10 +78,47 @@ With Jenkins set up on the VM, this enabled coordination of the automated proces
  
 
 ## Installation 
+### Prerequisites 
+Ensure that firewall rules are set and that HTTP is allowed. In the case of GCP; sett firewall rules to allow TCP access on the specified ports, and assign the tag names that you create to the VM that is running your app.
 
-- List of prerequisites? (e.g., Git, etc.) 
+If you are using Jenkins, you will need to set Jenkins as a sudoer; enter ‘sudo visudo’ on the shell, and setting the rule “jenkins ALL=(ALL:ALL) NOPASSWD:ALL”, giving Jenkins root access. 
 
- 
+To run the Docker commands from a Jenkins build, you will need to preface the commands with ‘sudo’, otherwise it will not have sufficient permission 
+
+Jenkins and the app cannot share a port number, and the port number of the app was deliberately set to 8081 - as Jenkins’ port number is 8080 by default.
+
+There are a number of ways to run the app, but these instructions will assume that the reader is running the app as the intended user would - from the cloud and using a cloud database. In order to make this platform independent, the instructions will just explain how to run it from the VM, or from a Docker container.  
+
+### Running from a VM
+To run from a VM, first ensure that JRE and Maven are installed on the VM instance (mvn -version and java -version from the CLI should show you if they are installed). 
+If not, calling sudo apt install maven/java, for example. -----------
+Again, ensure that git is installed. Once installed, call:
+````
+git clone https://github.com/nbBernard/team2-help-queue.git cd
+````
+into the team2-help-queue directory. 
+Once in this directory, call:
+````
+mvn clean install
+````
+then navigate to the newly-created target directory. 
+You will find a jar file in this folder called Help-Queue-0.0.1-SNAPSHOT.jar, and lastly call:
+````
+java -jar Help-Queue-0.0.1-SNAPSHOT.jar
+````
+which should run the API from port 8081 of your cloud IP address. 
+You can test this by navigating to the URL:
+````
+http://<your ip address>:8081/read
+````
+which should present you with “[]” on the page, signifying that you are connecting to the API, and receiving an empty object array. Alternatively, if you are using Jenkins, you can add these commands to a freestyle build project in the build actions (Execute Shell), which will do this for you in its own environment when you build.  
+
+Please note that thi sapp is currently configured to link to a GCP SQL database, as specified in the application.properties file - there is the option of running from an H2 database if you change the profile to ‘test’. 
+It may be worth forking this project, and either cloning it down to your machine locally to change the database location, or editing the database path in VIM on the VM so that your data goes to where you want it to. 
+If you want to use your own database rather than H2, you will need to create a database, and create tables as per the schema detailed on:
+````
+https://github.com/nbBernard/team2-help-queue/blob/main/src/main/resources/ticket-schema.sql
+````
 
 ## Usage 
 

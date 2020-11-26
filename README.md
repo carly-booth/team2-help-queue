@@ -17,11 +17,11 @@ IT support staff work through the queue of tickets, which are ordered based on w
 1. Project Development 
 
 2. Architecture 
-   - CI pipeline 
+   - Back-end
 
-   - Flowchart 
+   - DevOps: CI/CD Pipeline
 
-   - UMLs? 
+   - UML Diagrams
 
 3. Risk Assessment 
 

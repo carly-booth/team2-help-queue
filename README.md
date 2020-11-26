@@ -39,7 +39,9 @@ We then collectively created a product backlog containing 3 main tasks, with sub
 
 Midway through the project, changes were made to the project specification; the application would be intended for internal use at Atos, rather than a classroom training tool. As this change was only superficial, alterations were quickly made to the business case and business model canvas to meet the new requirements. No changes were necessary to the back-end as the application would function the same. The product backlog items’ titles and descriptions were not updated, as the actual tasks remained the same, just with superficial changes to certain words. Essentially, the change to the specification did not significantly delay project progression. 
 
----JIRA screenshots
+![Sprint Backlog](/spring-backlog.png)
+
+![Kanban-board-in-progress](/kanban-board-in-progress.png)
 
 The initial tasks completed were DevOps operations: setting up Jenkins within GCP, with a webhook, ensuring Spring Boot ran from the GCP console and applying Docker for containerisation. After these were completed, joining the back and front-end could begin. 
 

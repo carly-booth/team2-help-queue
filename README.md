@@ -151,8 +151,7 @@ This can be tested and should show a success message below. From then on, any ch
 ## (Contributing) 
 ## Credits 
 
-### License 
+## License 
 
-### Risk Assessment
 
 

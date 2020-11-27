@@ -13,15 +13,15 @@ IT support staff work through the queue of tickets, which are ordered based on w
 
 ## Table of Contents 
 
-1.[Project Development](#Project-Development)
+1. [Project Development](#Project-Development)
 
 2. [Architecture](#Architecture) 
    
-   [- Front-end](#Front-end)
+    [- Front-end](#Front-end)
   
-   [- Back-end](#Back-end)
+    [- Back-end](#Back-end)
    
-   [- DevOps: CI/CD Pipeline](#DevOps-CD/CD-Pipeline)
+    [- DevOps: CI/CD Pipeline](#DevOps-CD/CD-Pipeline)
 
 
 3. [Risk Assessment](#Risk-Assessment) 

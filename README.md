@@ -16,9 +16,9 @@ IT support staff work through the queue of tickets, which are ordered based on w
 1. Project Development 
 
 2. Architecture 
-  - Front-end
+   - Front-end
   
-  - Back-end
+   - Back-end
    
    - DevOps: CI/CD Pipeline
 

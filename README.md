@@ -21,7 +21,7 @@ IT support staff work through the queue of tickets, which are ordered based on w
   
     [- Back-end](#Back-end)
    
-    [- DevOps:CI/CD Pipeline](#DevOps-CDCD-Pipeline)
+    [- DevOps: CI/CD Pipeline](#DevOps-CDCD-Pipeline)
 
 
 3. [Risk Assessment](#Risk-Assessment) 

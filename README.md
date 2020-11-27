@@ -21,9 +21,8 @@ IT support staff work through the queue of tickets, which are ordered based on w
   
    [- Back-end](#Back-end)
    
-   [- DevOps: CI/CD Pipeline](#DevOps:-CD/CD-Pipeline)
+   [- DevOps: CI/CD Pipeline](#DevOps-CD/CD-Pipeline)
 
-   [- UML Diagrams](#UML-Diagrams)
 
 3. [Risk Assessment](#Risk-Assessment) 
 
@@ -48,15 +47,6 @@ The initial tasks completed were DevOps operations: setting up Jenkins within GC
 
 Documentation of the project began with developing a business case (what, why, who, how and future vision) and producing a Business Model Canvas. A list of technical requirements was put together, describing the user story or back-end setup, target user (employee/IT support/developer), task description and goal, and acceptance criteria.  Once the technical specification had been compiled, full system and component diagrams were created. 
 
-![CI-pipeline](/CI-pipeline.jpg)
- 
-<sub>*CI/CD Pipeline.*<sub>
-
-![service-diagram](/service-diagram.jpg)
- 
-<sub>*Service Diagram.*<sub>
-
- 
 ## Architecture 
 ### Front-end
 
@@ -66,8 +56,17 @@ The back-end of the app comprises a REST API with full CRUD functionality, creat
 The hosting virtual machine is provided by GCP Console, and specifically using aubuntu-1804-bionic-v20201116 image, with n1-standard-1 (1 vCPU, 3.75 GB memory) machine type. The API itself is run from within a Docker container, which will be elaborated on further when discussing the CI/CD pipeline.  
 In order to build the API, Maven was used to generate a jar file, which was run from within a Docker container. The  instructions for this were specified in a Dockerfile, and automatically triggered by Jenkins build instructions.  
 
+![service-diagram](/service-diagram.jpg)
+ 
+<sub>*Service Diagram.*<sub>
+
 ### DevOps: CI/CD Pipeline
 In order to create an effective CI/CD pipeline, a number of technologies were used. Specifically, Git was used for version control, with GitHub hosting our remote repository. A feature-branch model of working was utilised: new branches were created for each new feature and pushed to GitHub, then merged into the development branch, and finally into the main branch. A webhook was set up within GitHub, whereby new pushes to main trigger a build in our Jenkins instance running on the VM.  
+
+
+![CI-pipeline](/CI-pipeline.jpg)
+ 
+<sub>*CI/CD Pipeline.*<sub>
 
 With Jenkins set up on the VM, this enabled coordination of the automated process of generating new builds, spinning up fresh Docker containers with the new features as a result. This was set up as a freestyle project within Jenkins; this simply calls Docker build and run commands, prompting the instructions within the Dockerfile to be run. The Dockerfile details a two-stage build process, whereby one container is spun up to run the Maven build command, and another container receives the generated jar file and runs this from within it, using a Java image. This was found to be much more streamlined than running the API directly from the VM, allowing for a lightweight CI/CD process.  
 
@@ -75,8 +74,7 @@ With Jenkins set up on the VM, this enabled coordination of the automated proces
 
 [Team-2-Ticketing-Risk-Assessment](/Team-2-Ticketing-Risk-Assessment.xlsx)
     
-    
-
+ 
 ## Installation 
 ### Prerequisites 
 - Installed:

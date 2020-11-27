@@ -13,7 +13,7 @@ IT support staff work through the queue of tickets, which are ordered based on w
 
 ## Table of Contents 
 
-1.[Project Development](#anchors-in-markdown)
+1.[Project Development](#Project-Development)
 
 2. Architecture 
    - Front-end

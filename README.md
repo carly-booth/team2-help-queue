@@ -48,11 +48,11 @@ The initial tasks completed were DevOps operations: setting up Jenkins within GC
 Documentation of the project began with developing a business case (what, why, who, how and future vision) and producing a Business Model Canvas. A list of technical requirements was put together, describing the user story or back-end setup, target user (employee/IT support/developer), task description and goal, and acceptance criteria.  Once the technical specification had been compiled, full system and component diagrams were created. 
 
 ![CI-pipeline](/CI-pipeline.jpg)
-
+ 
 <sub>*CI/CD Pipeline.*<sub>
 
 ![service-diagram](/service-diagram.jpg)
-
+ 
 <sub>*Service Diagram.*<sub>
 
  

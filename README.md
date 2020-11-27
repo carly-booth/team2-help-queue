@@ -151,5 +151,3 @@ This can be tested and should show a success message below. From then on, any ch
 
 ## Usage 
 - Screenshots of platform in use 
-
-## License 

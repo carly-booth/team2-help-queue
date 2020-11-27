@@ -15,20 +15,21 @@ IT support staff work through the queue of tickets, which are ordered based on w
 
 1.[Project Development](#Project-Development)
 
-2. Architecture 
-   - Front-end
-  
-   - Back-end
+2. [Architecture](#Architecture) 
    
-   - DevOps: CI/CD Pipeline
+   [- Front-end](#Front-end)
+  
+   [- Back-end](#Back-end)
+   
+   [- DevOps: CI/CD Pipeline](#DevOps:-CD/CD-Pipeline)
 
-   - UML Diagrams
+   [- UML Diagrams](#UML-Diagrams)
 
-3. Risk Assessment 
+3. [Risk Assessment](#Risk-Assessment) 
 
-4. Installation 
+4. [Installation](#Installation) 
 
-5. Usage 
+5. [Usage](#Usage) 
 
 ### Project Development
 To begin, we assigned roles within the Scrum Team; back-end and front-end developers, DevOps developers and documentation leads.  

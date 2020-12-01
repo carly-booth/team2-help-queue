@@ -49,7 +49,13 @@ Documentation of the project began with developing a business case (what, why, w
 
 ## Architecture 
 ### Front-end
+The front-end was developed using HTML, CSS and JavaScript, while Bootstrap was used as the basis of the website.
 
+Developing the front-end began with creating the wireframe for the site to give a visual representation of how the site was envisioned. Separate pages were created and decisions made on how they would be brought together to form a fully functioning site. 
+
+Wireframes were created for the following pages: Home, Create Ticket, My Ticket and Contact page. The basic structure for each page on the site consisted of a header, main and footer. The header was developed to include the Atos logo, the nav bar and also the footer - using Bootstrap.
+
+Tasks were divided between the front-end team to develop and filling the main sections of each page with appropriate content.
 
 ### Back-end
 The back-end of the app comprises a REST API with full CRUD functionality, created with SpringBoot. Integration tests were written and performed also using SpringBoot, and  Postman was used to test the API functionality. When testing, a H2 database was used - as configured by our test profile. In production, Cloud SQL was used, as provided by Google, as linked to by our production profile. 
